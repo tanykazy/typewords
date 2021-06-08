@@ -6,9 +6,9 @@ import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-  @HostBinding('tabIndex') tabIndex: string;
+  @HostBinding('tabIndex') tabIndex = '0';
+
   constructor() {
-    this.tabIndex = '0';
   }
 
   ngOnInit(): void {

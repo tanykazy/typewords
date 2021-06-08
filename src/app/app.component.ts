@@ -1,4 +1,4 @@
-import { Component, HostBinding, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,6 @@ export class AppComponent {
 
   ngOnInit() {
     // document.addEventListener('keydown', (event) => this.onKeydown(event))
-    
   }
 
   // @HostListener('document:keydown', ['$event'])
