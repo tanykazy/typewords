@@ -14,9 +14,15 @@ export class RomajiService {
 
   getAds() {
     return [
-      new WordItem(HeroProfileComponent, { name: 'Bombasto', bio: 'Brave as they come' }),
+      new WordItem(HeroProfileComponent, {
+        name: 'Bombasto',
+        bio: 'Brave as they come'
+      }),
 
-      new WordItem(HeroProfileComponent, { name: 'Dr IQ', bio: 'Smart as they come' }),
+      new WordItem(HeroProfileComponent, {
+        name: 'Dr IQ',
+        bio: 'Smart as they come'
+      }),
 
       new WordItem(HeroJobAdComponent, {
         headline: 'Hiring for several positions',

@@ -13,12 +13,12 @@ import { HttpClient } from '@angular/common/http'; // 追加
 export class AppComponent {
   ads: WordItem[] = [];
 
-  constructor(private adService: RomajiService,
+  constructor(private romajiService: RomajiService,
     private httpClient: HttpClient) {
   }
 
   ngOnInit() {
-    this.ads = this.adService.getAds();
+    this.ads = this.romajiService.getAds();
     // document.addEventListener('keydown', (event) => this.onKeydown(event))
     let ret = this.fetch();
     console.log(ret);
@@ -30,7 +30,7 @@ export class AppComponent {
   }
 
   fetch() { // 追加
-    return this.httpClient.get('https://tatoeba.org/ja').subscribe(data => {
+    return this.httpClient.get('https://yomi-tan.jp/api/yomi.php?ic=UTF-8&oc=UTF-8&k=h&n=3&t=%E6%BC%A2%E5%AD%97').subscribe(data => {
         console.log(data);
     });
   }
